@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        
+        nav {
+            width: 100%;
+            height: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            position: fixed;
+            top: 29px;
+            /* border: 1px solid; */
+        }
+        header{
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            
+        }
+        .l a {
+            text-decoration: none;
+            color: black;
+        }
+        .menu-link {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+        
+        .menu-link:hover .dropdown-content {
+            display: block;
+            
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .l {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+       
+        .lo {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .c {
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        i:hover {
+            color: lightblue;
+        }
+        .luma{
+            position: fixed;
+            top: 36px;
+            left: 50%;
+        }
+        .background-section {
+            background-image: url('./DeshleeCouch_Lifestyle8@2x.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 95% 98%;
+            height: 600px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .background-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .background-section button {
+            padding: 10px 20px;
+            background-color: white;
+            color:black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .li:hover{
+            color: green;
+        }
+        .i{
+            margin-left: 800px;
+            text-align: start;
+            font-size: 100px;
+            font-weight: 900;
+        }
+        .background-section button:hover {
+            background-color: black;
+            color: white;
+        }
+        .skincare{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            color: rgb(137, 125, 125);
+            font-size: 20px;
+            flex-direction: column;
+            
+        }
+        .img{
+            margin-top: 100px;     
+        }
+        .leaf{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 100px;
+        }
+        /* slider */
+        .cards{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 5%;
+        }
+        .one{
+            padding-left: 70px;
+        }
+
+        .two{
+            margin-left: 7px;
+        }
+
+        .three{
+            margin-left: 7px;
+        }
+
+        .cardcon{
+            background-color: #F5F3EF;
+            height: 30%;
+            width: 100%;
+            margin-top: -2%;
+        }
+
+        .maincard{
+            padding-top: 20px;
+            font-family: "DM Sans", sans-serif;
+            padding-left: 10px;
+            font-size: 19px;
+        }
+
+        .paracard{
+            
+            font-family: "DM Sans", sans-serif;
+            padding-left: 10px;
+            font-size: 10px;
+        }
+
+        .pricegre{
+            
+            color: green;
+         
+            font-size: 19px;
+            width: 30%;
+        }
+
+        .addcart{
+            
+            
+                width: 90px;
+                padding: 10px ;
+                text-align: center;
+                
+                border-radius: 25px;
+                font-weight: bold;
+                border: none;
+                color:white;
+                cursor: pointer;
+                background-color:black;
+                font-size: 9px;
+                
+            
+            
+        }
+        .sameline{
+            width: 100%;
+            height: 80px;
+           
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .addcart:hover{
+            background-color: white;
+            border: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        .bshop{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .shopall{
+            width: 150px;
+                    height: 40px;
+                    background-color: rgb(62, 165, 62);
+                    border: 1px solid;
+                    border-radius: 50px;
+                    font-size: 17px;
+                    color: white;
+                    margin-top: 5%;
+                    font-family:Arial, Helvetica, sans-serif;
+        }
+
+        button:hover{
+            background-color: black;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .shopall{
+            height: 40px;
+            width: 150px;
+            
+            /* margin-left: 700px; */
+        }
+        .all{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stress{
+            margin-top: 50px;
+            width: 100%;
+            height: 1000px;
+            background-color: #F5F3EF;
+            display: flex;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 130px;
+            padding-right: 50px;
+        }
+        .story{
+            height: 40px;
+            width: 150px;
+            background-color: #00964A;
+            color: white;
+            border-radius: 50px;
+            border: none;
+            margin-top: 650px;
+            /* margin-left: -90px; */
+            
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css">
+</head>
+<body>
+    <header style="padding: 20px; background-color:green;">
+        <button class="close-btn" style="border:none; background: none; cursor: pointer; float: right;color: white;">X</button>
+        <h5 style="text-align: center;color: white; font-family: sans-serif; font-weight: 400; margin-bottom: 10px;">SHIP IT GOOD-FREE SHIPPING OVER $60 </h5>
+    </header>
+    <nav class="navbar">
+        <div class="l">
+            <div class="menu-link">
+                <a class="li" href="#">SHOP</a>
+                <div class="dropdown-content">
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                    <a href="#">Item 3</a>
+                </div>
+            </div>
+            <div class="menu-link">
+                <a class="li"  href="#">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                    <a href="#">Item 3</a>
+                </div>
+            </div>
+            <a class="li" href="#">THE GREENARY</a>
+        </div>
+        <div class="luma">
+            <img src="./Group 1@2x.png" alt="" style="height: 150px; width: 100px;">
+        </div>
+        <div class="c">
+            <i class="far fa-search"></i>
+            <i class="far fa-id-badge"></i>
+            <i class="far fa-shopping-basket"></i>
+        </div>
+    </nav>
+    <section style="height: 125px;width: 100%;"></section>
+    <section class="background-section">
+       <div class="i"> <h2>Natural <br>plant- <br> Powered <br> Beauty</h2>
+       
+        <button style="border-radius: 52px;">SHOP NOW</button></div>
+    </section><br><br><br><br>
+
+    <section class="skincare">
+        <p>Skincare as Nature Intended. <br>Formulated without parabens, sulfates, harmful alcohols, <br> synthetic dyes, artificial fragrances, animal products,<br> animal testing, and other bad stuff.</p>
+
+        <div class="img">
+            <img src="./Group 278.svg" alt="">
+            <img src="./Group 196.svg" alt="">
+            <img src="./Group 991.svg" alt="">
+            <img src="./Group 2249.svg" alt="">
+            <img src="./Group 2310.svg" alt="">
+            <img src="./Group 2250.svg" alt="">
+        </div>
+
+    </section>
+
+    <section class="leaf">
+        <img src="./Group 2503.png" alt=""><br>
+        <p><b style="font-size: 20px;">Shop Our Skin-Loving Lineup</b></p><br>
+        <p style="color: rgb(137, 125, 125); font-size: 15px;">Skincare formulated for hydrated, nourished, hey-good-looking skin.</p>
+    </section>
+     
+    <!-- slider -->
+    <section>
+        <div class="cards">
+        <div class="one"> <img src="./L&L_Website_lineup2@2x.png" alt="" height="350" width="300px">
+        <div class="cardcon">
+          <h3 class="maincard">Relief and Repair Mosturizer</h3>
+          <p class="paracard">A mosturizer for dry and sensitive skin that hydrates and soothes</p>
+          <div class="sameline">
+          <h4 class="pricegre">$0.00</h4>
+          <button type="button" class="addcart">ADD TO CART</button></div>
+        </div>
+        </div>
+        <div class="two"><img src="./L&L_Website_lineup1.png" alt="" height="350px" width="300px">
+            <!-- <img src="./Group 2507.png" alt=""> -->
+          <div class="cardcon">
+            <h3 class="maincard">Relief and Repair Mosturizer</h3>
+            <p class="paracard">A mosturizer for dry and sensitive skin that hydrates and soothes</p>
+            <div class="sameline">
+            <h4 class="pricegre">$0.00</h4>
+            <button type="button" class="addcart">ADD TO CART</button></div>
+          </div>
+        </div>
+
+        <div class="three"><img src="./L&L_Website_lineup3.png" alt="" height="350px" width="300px">
+          <div class="cardcon">
+            <h3 class="maincard">Relief and Repair Mosturizer</h3>
+            <p class="paracard">A mosturizer for dry and sensitive skin that hydrates and soothes</p>
+            <div class="sameline">
+            <h4 class="pricegre">$0.00</h4>
+            <button type="button" class="addcart">ADD TO CART</button></div>
+          </div>
+        </div>
+      </div>
+  
+        <div class="all"><button class="shopall" type="submit">SHOP ALL ></button></div>
+      </section>
+
+      <!-- no stress just great skin -->
+      <section class="stress">
+        <div>
+            <img src="kreated-media-p0ASrbayoPQ-unsplash.png" alt="">
+        </div>
+        <div>
+            <h3 style="color: #00964A; font-size: 90px;text-align: start; margin-left: 130px; ">No Stress. <br> Just Great <br>Skin.</h3><br>
+            <p class="text">All too often, skincare can be complicated, confusing, and costly. With endless products making all kinds of claims, and ingredients you need an advanced degree to figure out. Finding what works for you usually means trial and error, then more of the same. <br> <br><br> Enter Luma & Leaf. We’re here to give you products that work, that are sensitive-safe, without harmful ingredients. Luma & Leaf combines the power of plants with the promise of science, to deliver gorgeous results for all skin types. Keeping you hydrated, radiant, and feeling like your best self, period.</p>
+        </div>
+        <div><button type="submit" class="story">OUR STORY</button></div>
+      </section>
+    
+
+</body>
+</html>
